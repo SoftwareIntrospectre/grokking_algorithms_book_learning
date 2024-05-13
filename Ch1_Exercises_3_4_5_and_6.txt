@@ -1,0 +1,19 @@
+Exercises: Give the run time for each of these scenarios in terms of Big O.
+
+Q3. You have a name, and you want to find the person's phone number in the phone book
+A3. O(log n) ---> because we can do Binary Search to narrow it down, since we have a target
+    (guessed correctly, checked back of book)
+
+
+Q4: You have a phone number, and you want to find the person's name in the phone book. (Hint: You'll have to search through the whole book!)
+A4: O(n) ---> The phone numbers are not ordered in a phone book, and thus Binary Search cannot work. We'll have to do Linear Search to find it.
+    (guessed correctly, checked back of book)
+
+Q5: You want to read the numbers of every person in the phone book.
+A5: O(n) ---> We're essentially doing an operation for all items in the book, meaning we have to do them all. Linear Search.
+    (guessed correctly, checked back of book)
+
+Q6: You want to read the numbers of just the A's. (This is a tricky one! It involves concepts athat are covered more in Chapter 4. Read the answer - you may be surprised!)
+A6: O(n / 26) ---> It would be O(n), but we are stopping 1/26th of the way if we search linearly. Won't need to check the entire list.
+    (actual answer was O(n) ---> dropping constants apparently.)
+        ^ seems weird in practice, because 1/26th is still way less than 26/26...
