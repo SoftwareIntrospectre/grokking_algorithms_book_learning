@@ -1,0 +1,10 @@
+Suppose you're building an app to keep track of your finances.
+    1. Groceries
+    2. Movie
+    3. SFBC Membership
+
+Every day, you write down everything you spent money on. At the end of the month, you review your expenses and sum up how much you spent.
+So you have lots of inserts and a few reads. Should you use an array or list?
+
+Answer: Linked List --> This is more efficient for inserts, because memory is not contiguous (not adjacent). Arrays are better for reads, Linked Lists are better for inserts/deletes.
+    Back of the book: Above is correct, and since we're reading EVERY element in the list anyway, Linked List is also fine.
