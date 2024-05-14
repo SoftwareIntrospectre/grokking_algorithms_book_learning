@@ -1,0 +1,97 @@
+Question 1: 
+
+    Suppose you're building an app to keep track of your finances.
+        1. Groceries
+        2. Movie
+        3. SFBC Membership
+
+    Every day, you write down everything you spent money on. At the end of the month, you review your expenses and sum up how much you spent.
+    So you have lots of inserts and a few reads. Should you use an array or list?
+
+Answer 1: 
+
+    Linked List --> This is more efficient for inserts, because memory is not contiguous (not adjacent). Arrays are better for reads, Linked Lists are better for inserts/deletes.
+        (Back of the book: Above is correct, and since we're reading EVERY element in the list anyway, Linked List is also fine.)
+
+
+
+Question 2:
+
+    Suppose you're building an app for restaurants to take customer ordrs. Your app needs to store a list of orders. 
+    Servers keep adding orders to this list, and chefs take orders off the list and make them.
+    It's an order queue: servers add orders to the back of the queue, and the chef takes the first order off the queue and cooks it.
+
+    Would you use an array or linked list to iimplement this queue?
+    (Hint: Linked lists are good for inserts/deletes, and arrays are good for random access. Which one are you  going to be doing here?)
+
+
+Answer 2:
+
+    Linked List 
+      - We can do an O(1) insert at the start of the list (add a new head) for new orders,
+        and O(1) for the delete (remove the tail). There's no random searching needed. We only care about the front and back, and the
+        data structure itself maintains the order
+            (Back of the book: Correct)
+
+
+Question 3:
+
+    Let's run a thought experiment. Suppose Facebook keeps a list of usernames.
+    When someone tries to log into Facebook, a search is done for their username.
+    If their name is in the list of usernames, they can log in.
+    People log into Facebook pretty often, so there are a lot of searches through thiis list of usernames.
+    Suppose Facebook uses binary search to search the list. 
+    Binary search needs random access - you need to be able to get to the middle of the list of usernames instantly.
+    Knowing this, would you implement the list as an array or linked list?
+
+
+Answer 3:
+    Array
+      - Arrays can do reads in O(1), meaning that the size of the list has nothing to do with the search time.
+        Given that this would be a binary search, the ordered list would be O(log n) runtime.
+        Since this is a common occurance, this would be an efficient way to maintain this functionality.
+        (Back of the book: a Sorted Array)
+            ^ I forgot to mention this outright, but we would need to ensure this is ordered first.
+
+
+Question 4:
+
+    People sign up for Facebook pretty often too. 
+    Suppose you decided to use an array to store the list of users.
+    What are the downsides of an array for inserts?
+    In particular, suppose you're using binary search to search for logins.
+    What happens when you add new users to an array?
+
+Answer 4:
+
+    Arrays are contiguous memory, so that needs to be pre-allocated space. 
+    If we need to add more users, we need to recalculate the contiguous memory and essentially make a new Array.
+    With that we're creating a new larger empty array, inserting the old smaller array's data into it, and then inserting new users afterwards.
+    This can work, but is more expensive compared to appending a new item to a Linked List. If we expect lots of new inserts, a Linked List could be useful depending on the situation.
+        (Back of the book: This, and using Binary Search requires a sorted array. Each new array would need to be sorted every time.)
+            ^ I need to keep in mind to mention this outright. Binary Search: I always need to explicitly talk about Sorting the Arrays.
+
+
+Question 5:
+
+    In reality, Facebook uses neither an array nor a linked list to store user information.
+    Let's consider a hybrid data structure: an array of linked lists.
+    You have an array with 26 slots. Each slot points to a linked list.
+    For example, the first slot in the array points to a linked list containing all the usernames starting with A.
+    The second slot points to a linked list containing the usernames starting with B and so on.
+
+    Suppose Adit B signs up for Facebook, and you want to add them to the list. 
+    You go to slot 1 in the array, go to the linked list for slot 1, and add Adit B at the end.
+    Now, suppose you want to search for Zakhir H. You got to slot 26, which points to a linked list of all the Z names.
+    Then you search through that list to find Zakhir H.
+
+    Compare this hybrid data structure to arrays and linked lists. 
+    Is it slower or faster than each for searching and inserting? 
+    You don't have to give big O run times, just whether the data structure would be faster or slower.
+
+
+Answer 5:
+
+    Assuming that each of the arrays of Linked Lists are sorted (A is index 0, Z is index 26), then this in theory would be faster at inserting, but not necessarily searching.
+    This is because we can use Binary Search to identify which Linked List to find which letter to find, but then the search would take as long as the list is potentially.
+        (Back of the book: Pretty much this, and how the Linked List is good for everything except searching in this case.)
