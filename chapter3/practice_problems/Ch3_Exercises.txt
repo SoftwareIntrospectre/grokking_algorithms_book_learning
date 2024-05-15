@@ -1,0 +1,27 @@
+Queston 1:
+
+    Suppose I show you a call stack like this:
+
+    ----------------
+    |   Greet2     |
+    |              |
+    -----------------
+    | Name:| Maggie |
+    -----------------
+    |   Greet       |
+    |               |
+    -----------------
+    | Name:| Maggie |
+    -----------------
+
+    What information can you give me, based on this call stack?
+
+Answer 1:
+
+    Greet is the first item on the call stack. Name is defined as Maggie, and Greet2 uses this same value for Name as well.
+    Greet2 will be popped off of the call stack first, with Greet being partially completed.
+
+    The call stack stores the values of variables for multiple functions. Meaning, until the function that initialized the variable is done,
+    that variable is saved in memory for the call stack.
+        (Back of the book: Greet calls Greet2 with name = maggie. Greet suspends, and allows Greet2 to continue then pops off the call stack. Greet is now the highest on the call stack, and resumes until it's finishes.)
+            This makes sense, because Greet calls Greet2 inside itself.
