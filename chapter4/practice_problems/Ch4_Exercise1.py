@@ -1,11 +1,7 @@
-def sum(arr):
-    total = 0
 
-    for x in arr:
-        total += x
-    
-    return total
-
+'''
+    4.1: Write out the code for the earlier sum function
+'''
 
 
 '''
