@@ -1,0 +1,50 @@
+How long would each of these operations take in big O notation?
+
+4.5: Printing the value of each element in an array.
+    - O(n) because printing each element depends on how many there are, and there can't be shortcuts in this case.
+
+    Example: [1,2,3]
+
+    print(1)
+    print(2)
+    print(3)
+
+    This takes 3 operations, which is the size of the array. Always will be O(n)
+
+
+4.6: Doubling the value of each element in an array
+
+    - O(n) because there's 1 operation per element in the array, meaning linear operations.
+
+        This is essentially the same thing as 4.5, but with an additional operation on each element.
+
+        Example: [1,2,3,4]
+
+        2 * 1 = 2
+        2 * 2 = 2
+        2 * 3 = 3
+        2 * 4 = 4
+
+4.7: Doubling the value of just the first element in an array
+
+    - O(1) because regardless of the size of the array, we are only concerning ourselves with the first element only.
+    This means the amount of work will be the same. With an array, we can always check the first element while ignoring everything else
+
+
+    Example 1: [9]
+
+    print(9)
+
+
+    Example 2: [98, 12, 73, 5, 3, 189, 235, 33, 2, 64, 31]
+
+    print(98)
+
+        ^ Same amount of work for both.
+
+4.8: Creating a multiplication table with all the elements in the array. 
+So if your array is [2, 3, 7, 8, 10], you can multiple each element by 2,
+then multiply every element by  3, then 7, and so on.
+
+    This would be O(n^2) because the amount of work depends on the size of the array for the x-axis (columns)
+    and the size of the array again for the y-axis (columns).
