@@ -14,14 +14,7 @@ Question 6.1 Find the length of the shortest path from start to finish
             ()-------------->()
 
 
-Answer 6.1: Top --> Right (2 steps)
-
-              ()----------->(F) Finish
-              ^           
-             /          
-            /             
-           /
-   Start (S)              
+Answer 6.1: Top --> Right (2 steps)    
 
 
               ()----------->(F) Finish
