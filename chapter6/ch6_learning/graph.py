@@ -1,6 +1,6 @@
 graph = {}
 
-graph["you"] = ["alice", "bob", "clair"]
+graph["you"] = ["alice", "bob", "claire"]
 graph["bob"] = ["anuj","peggy"]
 graph["alice"] = ["peggy"]
 graph["claire"] = ["thom", "jonny"]
@@ -12,7 +12,7 @@ graph["jonny"] = []
 
 graph2 = {}
 
-graph2["you"] = ["alice", "bob", "clair"]
+graph2["you"] = ["alice", "bob", "claire"]
 graph2["bob"] = ["anuj","peggy"]
 graph2["alice"] = ["peggy"]
 graph2["anuj"] = []
