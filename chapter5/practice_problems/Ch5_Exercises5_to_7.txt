@@ -22,7 +22,7 @@ For each of these examples, which hash functions would provide a good distributi
 
 
 5.5 Answer: 
-    - Option 4 would be the best choice, because the names can vary in size and letter. Option 3 could also work.
+    - Option 4 would be the best choice, because the names can vary in size and letter. (Option 3 could also work.)
     - Ben and Bob both start with B and are 3 letters long. However, because of the different spelling we can place them in different slots.
         - Ben = (3 + 11 + 43) % 10 = 57 % 10 = index 7
         - Bob = (3 + 47 + 3) % 10 = 53 % 10 = index 3

@@ -1,0 +1,68 @@
+Run the breadth-first search algorithm on each of these graphs to find he solution.
+
+Question 6.1 Find the length of the shortest path from start to finish
+
+              ()----------->(F) Finish
+              ^ \            ^
+             /   \           |
+            /     \          |
+           /       v         |
+   Start (S)      ()         |
+          \       ^          |
+           \    /            |
+            v /              |
+            ()-------------->()
+
+
+Answer 6.1: Top --> Right (2 steps)
+
+              ()----------->(F) Finish
+              ^           
+             /          
+            /             
+           /
+   Start (S)              
+
+
+              ()----------->(F) Finish
+              ^             
+             /              
+            /               
+           /                
+   Start (S)      ()        
+          \                 
+           \                
+            v             
+            ()               ()
+
+
+Question 6.2 Find the length of the shortest path from "CAB" to "BAT"
+
+
+                 (MAT)
+                  ^  \
+                 /    \                 
+                /      v    
+            (CAT)---->(BAT) Finish
+             ^ ^         ^
+            /  |         |
+           /   |         |
+          /    |         |
+         /     |         |
+Start (CAB)-->(CAR)---->(BAR)
+
+
+Answer 6.2 CAB --> CAT --> BAT (2 steps)
+
+
+                 (MAT)
+                   
+                                    
+                         
+            (CAT)---->(BAT) Finish
+             ^         
+            /           
+           /            
+          /             
+         /              
+Start (CAB)   (CAR)     (BAR)
