@@ -49,6 +49,7 @@ Answer 6.3:
     A = Invalid (Eat Breakfast depends on Brush Teeth, so it can't be done first)
     B = Valid (Shower can be done any time after Wake Up, so this works.)
     C = invalid. (Shower depends on Wake Up, so it can't be first.)
+        (Answered correctly)
 
 
 
