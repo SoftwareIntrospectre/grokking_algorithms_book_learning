@@ -11,6 +11,25 @@ def person_is_seller(name):
     return name[-1] == "m"
 
 
+def search(name):
+    search_queue = deque()
+    search_queue += graph.graph(name)
+    searched = set()
+
+    while search_queue:
+        person = search_queue.popleft()
+        if not person in searched:
+            if person_is_seller(person):
+                print(person + " is a mango seller!")
+                return True
+            
+            else:
+                search_queue += graph.graph[person]
+                searched.add(person)
+
+    return False
+
+
 def find_mango_seller_from_graph(search_queue):
 
     # while the queue is not empty:
@@ -37,3 +56,5 @@ print("graph['you']: ", graph.graph["you"])
 print("search_queue: ", search_queue)
 
 find_mango_seller_from_graph(search_queue)
+
+search('Alice')

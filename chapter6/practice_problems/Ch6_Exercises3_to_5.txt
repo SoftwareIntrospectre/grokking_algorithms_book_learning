@@ -1,0 +1,120 @@
+Here's a small graph of my morning routine
+
+             (Shower)
+             /   
+            v
+    (Wake Up)
+            ^
+             \ 
+             (Brush Teeth) <--- (Eat Breakfast)
+
+It tells you that I can't eat brakfast until I've brushed my teeth. So "eat breakfast" DEPENDS ON "brush teeth".
+
+On the other hand, showering doesn't depend on brushing my teeth because I can shower before I brush my teeth.
+From this graph, you can make a list of the order in which I need to do my morning routine:
+
+1. Wake Up
+2. Shower
+3. Brush Teeth
+4. Eat Breakfast
+
+Note that "Shower" can be moved around, so this list is also valid:
+
+1. Wake Up
+2. Brush Teeth
+3. Shower
+4. Eat Breakfast
+
+Exercise 6.3: For these three lists, mark whether each one is valid or invalid
+
+    A.
+        1. Wake Up
+        2. Shower
+        3. Eat Breakfast
+        4. Brush Teeth
+
+    B.
+        1. Wake Up
+        2. Brush Teeth
+        3. Eat Breakfast
+        4. Shower
+
+    C.
+        1. Shower
+        2. Wake Up
+        3. Brush Teeth
+        4. Eat Breakfast
+
+Answer 6.3:
+    A = Invalid (Eat Breakfast depends on Brush Teeth, so it can't be done first)
+    B = Valid (Shower can be done any time after Wake Up, so this works.)
+    C = invalid. (Shower depends on Wake Up, so it can't be first.)
+
+
+
+Exercise 6.4: Here's a larger graph. Make a valid list for this graph.
+
+             (Exercise) <--- (Shower) <--- (Get Dressed)
+             /   
+            v
+    (Wake Up) <--- (Brush Teeth) <--- (Eat Breakfast)
+            ^
+             \ 
+             (Pack Lunch)
+
+
+Answer 6.4
+
+    1. Wake Up
+    2. Brush Teeth
+    3. Eat Breakfast
+    4. Pack Lunch
+    5. Exercise
+    6. Shower
+    7. Get Dressed
+
+
+    Book Answer:
+        1. Wake Up
+        2. Exercise
+        3. Shower
+        4. Brush Teeth
+        5. Get Dressed
+        6. Pack Lunch
+        7. Eat Breakfast
+            (Both answers are valid, but I prefer mine)
+
+
+Exericse 6.5: Which of the following graphs are also trees?
+
+    A. 
+         ()
+        /  \
+       v    v 
+      ()    ()
+     /  \
+    v    v 
+   ()    ()
+
+
+    B.
+         () <-----------
+        /  \           |
+       v    v          |
+      ()    ()         |
+       ^    /  \       |
+       |   v    v      |
+       ---()    () -----
+
+
+    C.
+       ()
+       ^   
+     /    
+    ()
+      \
+       v
+       ()----> ()
+
+
+Answer 6.5: A and C (correct)
