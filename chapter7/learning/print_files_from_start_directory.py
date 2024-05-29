@@ -30,4 +30,6 @@ def printnames(start_dir):
 current_dir = dirname(abspath(__file__))
 two_levels_up_start_dir = abspath(join(current_dir, '..', '..'))
 
+
+# Trees don't have cycles, and only one parent. No need to keep track because infinite loop cannot happen.
 printnames(two_levels_up_start_dir)
