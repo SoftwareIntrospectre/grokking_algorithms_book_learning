@@ -1,5 +1,5 @@
 from os import listdir
-from os.path import isfile, join, dirname, abspath
+from os.path import isfile, join, dirname, abspath, splitext
 from collections import deque
 
 def printnames(start_dir):
@@ -16,9 +16,12 @@ def printnames(start_dir):
         for file in sorted(listdir(dir)):
             fullpath = join(dir, file)
 
-            # if item is a file: print out the name
+            # if item is a file with a file extension: print out the name 
             if isfile(fullpath):
-                print(file)
+                root, ext = splitext(file)
+                if ext:
+                    print(file)
+
 
             else:
 
