@@ -83,7 +83,7 @@ Answer 6.4
         5. Get Dressed
         6. Pack Lunch
         7. Eat Breakfast
-            (Both answers are valid, but I prefer mine)
+            (My answer is off, because breadth first search looks at each "layer" before moving on)
 
 
 Exericse 6.5: Which of the following graphs are also trees?
