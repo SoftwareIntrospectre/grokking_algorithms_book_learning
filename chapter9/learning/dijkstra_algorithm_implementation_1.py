@@ -60,6 +60,24 @@ processed = set()
 
 """
 
+def find_lowest_cost_node(costs):
+    lowest_cost = math.inf
+    lowest_cost_node = None
+
+    # goes through each node
+    for node in costs:
+        cost = costs[node]
+
+
+        # if it's the lowest cost so far and hasn't been processed yet
+        if cost < lowest_cost and node not in processed:
+
+            # sets it as the new lowest-code node
+            lowest_cost = cost
+            lowest_cost_node = node
+    
+    return lowest_cost_node
+
 # finds the lowest-cost node you haven't processed yet
 node = find_lowest_cost_node(costs)
 
@@ -86,3 +104,4 @@ while node is not None:
 
     # finds the next node to process and loops
     node = find_lowest_cost_node(costs) 
+
