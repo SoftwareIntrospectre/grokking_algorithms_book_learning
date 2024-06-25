@@ -1,0 +1,10 @@
+"""
+    You're going to Europe, and you have seven days to see everything you can.
+    You assign a point value to each item (how much you want to see it) and estimate how long it takes.
+
+    How can you maximize the point total (seeing all the things you really want to see) during your stay?
+    Come up with a greedy strategy.
+    Will that give you an optimal solution?
+"""
+
+The greedy strategy would be to go to the highest point values possible at each turn. No that would not be optimal.

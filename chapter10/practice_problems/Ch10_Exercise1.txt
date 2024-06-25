@@ -1,0 +1,14 @@
+"""
+    You work for a furniture company, and you have to ship furniture all over the country.
+    You need to pack your truck with boxes.
+    All the boxes are of different sizes, and you're trying to maximize the space you use in each truck.
+    
+    How would you pick boxes to maximize space?
+    Come up with a greedy strategy.
+    Will that give you the optimal solution?
+"""
+
+The greedy strategy is to use the largest boxes possible, but that would not be optimal.
+
+I would do the "rock/pebbles/sand in a jar" strategy. I'd put in as many large boxes as I could, then the medium sized boxes where there are gaps,
+then the smallest boxes where even smaller gaps exist.
